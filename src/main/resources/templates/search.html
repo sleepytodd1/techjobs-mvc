@@ -36,7 +36,15 @@
 
     <hr />
 
-    <!-- TODO #2 - Loop over jobs map to display all job fields -->
+    <!-- TODO #2 - Loop over jobs map to display all job fields-->
+
+    <table class="job-listing" name="listings" th:for="${listings}"  th:each="listing : ${listings}" >
+        <tr th:each="row : ${listing}">
+            <td th:text="${row.key}"></td>
+            <td th:text="${row.value}" ></td>
+        </tr>
+    </table>
+
 
 </div>
 
